@@ -1,0 +1,419 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.contact-info {
+    font-size: 14px;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+.welcome {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/029/230/879/non_2x/industrial-high-tech-equipment-in-production-in-a-workshop-at-a-factory-free-photo.jpg'); /* replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+.welcome1 {
+    background-image: url('https://www.shutterstock.com/image-photo/weld-inspection-technician-inspector-using-260nw-1717564285.jpg'); /* replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+.welcome h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.welcome button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.welcome button:hover {
+    background-color: #0056b3;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.welcome-text h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.welcome-text p {
+    font-size: 18px;
+}
+
+
+.welcome1 {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.description {
+    max-width: 50%;
+}
+
+.description h2 {
+    font-size: 28px;
+}
+
+.description p {
+    font-size: 16px;
+}
+
+.who-we-are {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: left;
+}
+
+.who-we-are img {
+    max-width: 50%;
+    margin-right: 20px;
+}
+
+.container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 45%;
+}
+
+#client-satisfaction {
+    background-color: orange;
+}
+
+/* Center the carousel wrapper */
+.carousel-wrapper {
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-carousel {
+    position: relative;
+    width: 1500px; /* Adjust as needed */
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex; /* Use flexbox for better control */
+    gap: 20px; /* Add gap between slides */
+    padding: 0 10px; /* Optional: Add padding to prevent overflow */
+}
+
+.custom-carousel-slide {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  
+}
+
+.custom-carousel-content {
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* Slide background images */
+#custom-slide1 {
+    background-image: url('https://t4.ftcdn.net/jpg/00/91/26/73/360_F_91267373_sBdKhXBHiQmEDfjVZVOfWx6ORMAOlvgT.jpg');
+}
+#custom-slide2 {
+    background-image: url('https://assets.onestopndt.com/p/uploads/ndt-articles/original/liquid-penetrant-testing-basics-usage-and-benefitstYiLuRYhlqliquid-penetrant-testing-basics-usage-and-benefits1673622254bToemXfKciliquid-penetrant-testing-basics-usage-and-benefits1638457094SAgCijgo4iblog8image.png');
+}
+#custom-slide3 {
+    background-image: url('https://t3.ftcdn.net/jpg/01/12/02/84/360_F_112028436_bUySNM3cJNx2k8sRKvU5VX2x3bltlv3C.jpg');
+}
+#custom-slide4 {
+    background-image: url('https://wardvesselandexchanger.com/wp-content/uploads/2021/05/Eddy-Current-Job-Site-2.jpg');
+}
+
+.custom-carousel-slide {
+    transition: transform 1s ease-in-out;
+}
+
+.services-heading {
+    width: 150px; /* Adjust width as needed */
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto; /* Center the div horizontally */
+}
+
+
+.flowchart1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 17px; /* Add some space between the cards */
+}
+
+.company {
+    background-color: #ffffff; /* Set a default background color */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 230px; /* Adjust the width of the cards */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Add transition for transform and background-color */
+}
+
+.company:hover {
+    transform: translateY(-10px); /* Add a slight lift effect on hover */
+}
+
+/* Customize colors for different companies */
+.company:nth-child(odd) {
+    background-color: #f5f5f5; /* Light gray for odd numbered companies */
+}
+
+.company:nth-child(even) {
+    background-color: #e0e0e0; /* Lighter gray for even numbered companies */
+}
+
+
+.contact-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-bottom: 1px solid #444;
+}
+
+.department {
+    width: 30%;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.footer-section {
+    width: 30%;
+    text-align: center;
+}
+
+.footer-section img {
+    width: 150px;
+}
+
+.footer-section p {
+    text-align: justify;
+}
+
+.footer-section button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+}
+
+.footer-section button:hover {
+    background-color: #555;
+}
+
+.footer-section input {
+    padding: 10px;
+    width: 80%;
+    margin: 10px 0;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+.footer-section iframe {
+    border: none;
+    width: 100%;
+    height: 200px;
+}
+
+
+.flowchart {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Node Styles */
+.node {
+    background-color: #4a90e2;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.node#coordinator {
+    grid-column: 3 / 4;
+}
+
+.node#supervisor-left {
+    grid-column: 2 / 3;
+}
+
+.node#supervisor-right {
+    grid-column: 4 / 5;
+}
+
+.node#inspector-left1,
+.node#inspector-left2,
+.node#inspector-left3 {
+    grid-column: 1 / 2;
+}
+
+.node#inspector-right1,
+.node#inspector-right2,
+.node#inspector-right3 {
+    grid-column: 5 / 6;
+}
+
+.node#inspector-left1 {
+    grid-row: 3 / 4;
+}
+
+.node#inspector-left2 {
+    grid-row: 3 / 4;
+}
+
+.node#inspector-left3 {
+    grid-row: 3 / 4;
+}
+
+.node#inspector-right1 {
+    grid-row: 3 / 4;
+}
+
+.node#inspector-right2 {
+    grid-row: 3 / 4;
+}
+
+.node#inspector-right3 {
+    grid-row: 3 / 4;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Connection Lines */
+.flowchart::before,
+.flowchart::after {
+    content: "";
+    position: absolute;
+    background-color: red;
+}
+
+.flowchart::before {
+    top: 80px; /* Coordinator to Supervisors */
+    left: 50%;
+    width: 0;
+    height: 60px;
+    
+    transform: translateX(-50%);
+}
+
+.flowchart::after {
+    top: 200px; /* Supervisors to Inspectors */
+    left: 50%;
+    width: 0;
+    height: 60px;
+    
+    transform: translateX(-50%);
+}
