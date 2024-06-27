@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -17,59 +20,89 @@ header {
 
 nav {
     background-color: #333;
-    color: white;
 }
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+nav .navbar-nav {
+    margin: 0 auto; /* Centering the nav items */
 }
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    display: inline-block;
+nav .navbar-nav .nav-link {
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-
-nav ul li a:hover {
+nav .navbar-nav .nav-link:hover {
     background-color: #111;
 }
-
-.welcome {
-    background-image: url('https://static.vecteezy.com/system/resources/previews/029/230/879/non_2x/industrial-high-tech-equipment-in-production-in-a-workshop-at-a-factory-free-photo.jpg'); /* replace with your image URL */
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0;
-    text-align: center;
-    color: white;
+.navbar-brand-container {
+    display: flex;
+    align-items: center;
 }
 
-.welcome1 {
-    background-image: url('https://www.shutterstock.com/image-photo/weld-inspection-technician-inspector-using-260nw-1717564285.jpg'); /* replace with your image URL */
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0;
-    text-align: center;
-    color: white;
+.navbar-logo {
+    width: 40px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 10px; /* Adjust spacing between logo and text */
 }
 
-.welcome h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
 
-.welcome p {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
+ @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .welcome {
+            background-size: cover;
+            background-position: center;
+            padding: 180px 0;
+            text-align: center;
+            color: rgb(255, 226, 35);
+            background-image: url('https://static.vecteezy.com/system/resources/previews/029/230/879/non_2x/industrial-high-tech-equipment-in-production-in-a-workshop-at-a-factory-free-photo.jpg'); /* replace with your image URL */
+            font-family: 'Poppins', sans-serif; /* Replace with your desired font */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Text shadow for depth */
+            letter-spacing: 1px; /* Adjust letter spacing */
+            transition: background-image 1s ease-out;
+        }
+
+        .textofwelcome {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .textofwelcome.slide-in {
+            animation: slideIn 1s ease-out forwards;
+        }
+
+
+
+
+        .welcome h1 {
+            font-size: 48px; /* Adjust font size */
+            font-weight: 600; /* Adjust font weight */
+            line-height: 1.2; /* Adjust line height */
+        }
+        
+        .welcome p {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        
 
 .welcome button {
     padding: 10px 20px;
@@ -84,6 +117,16 @@ nav ul li a:hover {
     background-color: #0056b3;
 }
 
+.welcome1 {
+    background-image: url('https://img.freepik.com/premium-photo/cogwheel-gears-mechanism-industrial-machinery_263357-3067.jpg'); /* replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    padding: 140px 0;
+    text-align: center;
+    color: white;
+}
+
+
 .welcome-text {
     position: absolute;
     top: 50%;
@@ -94,16 +137,50 @@ nav ul li a:hover {
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
+    animation: slideIn1 1s forwards;
+    max-width: 600px; /* Limit maximum width */
+    width: 70%;
+}
+
+
+
+@keyframes slideIn1 {
+    from {
+        transform: translate(-50%, -100%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .welcome1 {
+        padding: 190px 50px; /* Adjust padding for smaller screens */
+    }
+
+    .welcome-text {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
 }
 
 .welcome-text h1 {
     font-size: 36px;
     margin: 0;
+    
 }
 
 .welcome-text p {
     font-size: 18px;
 }
+
+.welcome h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
 
 
 .welcome1 {
@@ -111,9 +188,46 @@ nav ul li a:hover {
     text-align: center;
     color: white;
 }
+.who-we-are {
+    padding: 50px 0;
+    text-align: left;
+    position: relative;
+}
+
+.who-we-are img {
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding shadow to the image */
+    opacity: 0;
+    animation: slide-in 1s forwards;
+    animation-delay: 0.5s;
+}
 
 .description {
-    max-width: 50%;
+    opacity: 0;
+    animation: slide-in-text 1s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in-text {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .description h2 {
@@ -124,105 +238,214 @@ nav ul li a:hover {
     font-size: 16px;
 }
 
-.who-we-are {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    text-align: left;
-}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .who-we-are {
+        padding: 30px 0;
+    }
 
-.who-we-are img {
-    max-width: 50%;
-    margin-right: 20px;
+    .who-we-are img {
+        margin-bottom: 20px;
+    }
 }
 
 .container {
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    display: flex;
+    justify-content: space-around; /* Center horizontally with space around */
+    align-items: flex-start; /* Align items to the top vertically */
+    margin-top: 50px; /* Add margin top for spacing */
 }
 
 .box {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 45%;
+    animation: slide-in 1s ease-out; /* Animation for slide-in effect */
 }
 
 #client-satisfaction {
     background-color: orange;
 }
 
-/* Center the carousel wrapper */
+/* Animation keyframes */
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack boxes vertically on small screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .box {
+        width: 80%; /* Adjust width for smaller screens */
+        margin-bottom: 20px; /* Add spacing between boxes */
+    }
+}
+
 .carousel-wrapper {
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
 }
 
 .custom-carousel {
-    position: relative;
-    width: 1500px; /* Adjust as needed */
-    height: 400px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex; /* Use flexbox for better control */
+    display: flex;
+    transition: transform 1s linear;
     gap: 20px; /* Add gap between slides */
-    padding: 0 10px; /* Optional: Add padding to prevent overflow */
+    padding-left: 20px;
 }
 
 .custom-carousel-slide {
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-  
+    min-width: 50%; /* Set minimum width to 50% */
+    box-sizing: border-box;
+    height: 300px; /* Increase the height of the slides */
+    background-color: #333; 
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Ensure text is centered */
 }
 
 .custom-carousel-content {
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
+.custom-carousel-content h1,
+.custom-carousel-content p {
+    color: white; /* Default text color */
+}
 
-/* Slide background images */
+.custom-carousel-content h1 {
+    font-size: 2rem; /* Adjust font size */
+    font-weight: 600; /* Use bold font weight */
+}
+
+.custom-carousel-content p {
+    font-size: 1.4rem; /* Adjust font size */
+    font-weight: 400; /* Use normal font weight */
+}
+
+/* Slide background images and unique text colors */
 #custom-slide1 {
     background-image: url('https://t4.ftcdn.net/jpg/00/91/26/73/360_F_91267373_sBdKhXBHiQmEDfjVZVOfWx6ORMAOlvgT.jpg');
-}
-#custom-slide2 {
-    background-image: url('https://assets.onestopndt.com/p/uploads/ndt-articles/original/liquid-penetrant-testing-basics-usage-and-benefitstYiLuRYhlqliquid-penetrant-testing-basics-usage-and-benefits1673622254bToemXfKciliquid-penetrant-testing-basics-usage-and-benefits1638457094SAgCijgo4iblog8image.png');
-}
-#custom-slide3 {
-    background-image: url('https://t3.ftcdn.net/jpg/01/12/02/84/360_F_112028436_bUySNM3cJNx2k8sRKvU5VX2x3bltlv3C.jpg');
-}
-#custom-slide4 {
-    background-image: url('https://wardvesselandexchanger.com/wp-content/uploads/2021/05/Eddy-Current-Job-Site-2.jpg');
+    background-size: cover; /* Ensure background image covers the slide */
+    background-position: center; /* Center the background image */
 }
 
-.custom-carousel-slide {
-    transition: transform 1s ease-in-out;
+#custom-slide1 .custom-carousel-content h1, #custom-slide1 .custom-carousel-content p {
+    color: #ffff00; /* Light red text color */
+}
+
+#custom-slide2 {
+    background-image: url('https://assets.onestopndt.com/p/uploads/ndt-articles/original/liquid-penetrant-testing-basics-usage-and-benefitstYiLuRYhlqliquid-penetrant-testing-basics-usage-and-benefits1673622254bToemXfKciliquid-penetrant-testing-basics-usage-and-benefits1638457094SAgCijgo4iblog8image.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#custom-slide2 .custom-carousel-content h1, #custom-slide2 .custom-carousel-content p {
+    color: #8000ff; /* Light blue text color */
+}
+
+#custom-slide3 {
+    background-image: url('./Images/MPT.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#custom-slide3 .custom-carousel-content h1, #custom-slide3 .custom-carousel-content p {
+    color: #d2ffd2; /* Light green text color */
+}
+
+#custom-slide4 {
+    background-image: url('https://wardvesselandexchanger.com/wp-content/uploads/2021/05/Eddy-Current-Job-Site-2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#custom-slide4 .custom-carousel-content h1, #custom-slide4 .custom-carousel-content p {
+    color: #ffcc99; /* Light orange text color */
+}
+
+#custom-slide5 {
+    background-image: url('./Images/MPI.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#custom-slide5 .custom-carousel-content h1, #custom-slide5 .custom-carousel-content p {
+    color: #cc99ff; /* Light purple text color */
+}
+
+#custom-slide6 {
+    background-image: url('./Images/crack.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#custom-slide6 .custom-carousel-content h1, #custom-slide6 .custom-carousel-content p {
+    color: #b4ff6a; /* Light pink text color */
 }
 
 .services-heading {
-    width: 150px; /* Adjust width as needed */
+    width: 90%;
+    max-width: 550px;
     background-color: white;
     text-align: center;
-    padding: 10px;
-    margin: 0 auto; /* Center the div horizontally */
+    padding: 20px;
+    margin: 60px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: slideIn3 1s ease-out;
 }
 
+.services-heading4 {
+    width: 90%;
+    max-width: 550px;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: slideIn3 1s ease-out;
+    position: relative;
+    top: -50px; /* Move the element upwards */
+    margin: 0 auto; /* Center horizontally */
+}
+@keyframes slideIn3 {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .flowchart1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 17px; /* Add some space between the cards */
+    gap: 17px; 
+    /* Add some space between the cards */
 }
 
 .company {
@@ -356,26 +579,11 @@ nav ul li a:hover {
     grid-column: 5 / 6;
 }
 
-.node#inspector-left1 {
-    grid-row: 3 / 4;
-}
-
-.node#inspector-left2 {
-    grid-row: 3 / 4;
-}
-
-.node#inspector-left3 {
-    grid-row: 3 / 4;
-}
-
-.node#inspector-right1 {
-    grid-row: 3 / 4;
-}
-
-.node#inspector-right2 {
-    grid-row: 3 / 4;
-}
-
+.node#inspector-left1,
+.node#inspector-left2,
+.node#inspector-left3,
+.node#inspector-right1,
+.node#inspector-right2,
 .node#inspector-right3 {
     grid-row: 3 / 4;
 }
@@ -405,7 +613,6 @@ nav ul li a:hover {
     left: 50%;
     width: 0;
     height: 60px;
-    
     transform: translateX(-50%);
 }
 
@@ -414,6 +621,107 @@ nav ul li a:hover {
     left: 50%;
     width: 0;
     height: 60px;
-    
     transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .flowchart {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .node#coordinator {
+        grid-column: 2 / 3;
+    }
+
+    .node#supervisor-left {
+        grid-column: 1 / 2;
+    }
+
+    .node#supervisor-right {
+        grid-column: 3 / 4;
+    }
+
+    .node#inspector-left1,
+    .node#inspector-left2,
+    .node#inspector-left3 {
+        grid-column: 1 / 2;
+    }
+
+    .node#inspector-right1,
+    .node#inspector-right2,
+    .node#inspector-right3 {
+        grid-column: 3 / 4;
+    }
+}
+
+@media (max-width: 576px) {
+    .flowchart {
+        grid-template-columns: 1fr;
+    }
+
+    .node {
+        width: 100%;
+    }
+
+    .node#coordinator,
+    .node#supervisor-left,
+    .node#supervisor-right,
+    .node#inspector-left1,
+    .node#inspector-left2,
+    .node#inspector-left3,
+    .node#inspector-right1,
+    .node#inspector-right2,
+    .node#inspector-right3 {
+        grid-column: 1 / 2;
+    }
+}
+
+.team-slider {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.team-slider-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.team-slider-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.team-slider-item img {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Adjust max height as needed */
+    object-fit: cover; /* Cover the entire container */
+}
+
+.team-slider-control-prev,
+.team-slider-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+    color: white;
+    text-decoration: none;
+}
+
+.team-slider-control-prev {
+    left: 10px;
+}
+
+.team-slider-control-next {
+    right: 10px;
 }
